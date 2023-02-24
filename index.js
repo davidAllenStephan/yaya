@@ -11,6 +11,7 @@ import extractRGBstructure from './extractRGBstructure.js'
 const index = async () => {
 	const s = await getSecrets()
 	const secret = await login(s)
+	console.log(secret)
 	const u = await getUser(secret)
 	const sendorview = prompt('send or view? (s or v) ')
 	if (sendorview == 's') {

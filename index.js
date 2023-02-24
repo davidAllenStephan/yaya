@@ -11,13 +11,14 @@ import extractRGBstructure from './extractRGBstructure.js'
 const index = async () => {
 	const s = await getSecrets()
 	const secret = await login(s)
+	console.log(secret)
 	const u = await getUser(secret)
 	const sendorview = prompt('send or view? (s or v) ')
 	if (sendorview == 's') {
 		const path = prompt('path: ')
 		const name = u.name
 		const a = prompt('address: ')
-		sendImage(path, a, name)
+		await sendImage(path, a, name)
 	} else {
 		const images = await getImage(u.address)
 		for (let i = 0; i < images.length; i++) {

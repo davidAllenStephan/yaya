@@ -1,5 +1,5 @@
-import getImageRGB from './getImageRGB'
-const simplify = (path) => {
+import getImageRGB from './getImageRGB.js'
+const simplifyImage = (path) => {
 	const data = getImageRGB(path)
 	let output = ''
 	for (let y = 0; y < data.length; y++) {
@@ -15,4 +15,4 @@ const simplify = (path) => {
 	return output
 }
 
-export default simplify
+export default simplifyImage

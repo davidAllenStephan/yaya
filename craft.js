@@ -4,7 +4,7 @@ const craft = (data) => {
             const red = data[y][x].red
             const green = data[y][x].green
             const blue = data[y][x].blue
-            if (red != 0 && green != 0 && blue != 0) {
+            if (red != 0 || green != 0 || blue != 0) {
                 process.stdout.write(`\x1B[48;2;${data[y][x].red};${data[y][x].green};${data[y][x].blue}m  `);
                 process.stdout.write('\x1B[0m')
             } else {

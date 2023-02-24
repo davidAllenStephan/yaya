@@ -1,6 +1,6 @@
 {
   "name": "yaya-image",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "command line pixel art",
   "type": "module",
   "main": "index.js",

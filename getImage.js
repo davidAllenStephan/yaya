@@ -1,4 +1,6 @@
-const get = async (address) => {
+import db from './firebaseConfig.js'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+const getImage = async (address) => {
 	const ref = collection(db, 'log')
 	const q = query(ref, where('reciever_address', '==', address))
 	const qs = await getDocs(q)
@@ -11,4 +13,4 @@ const get = async (address) => {
 	return images
 }
 
-export default get
+export default getImage

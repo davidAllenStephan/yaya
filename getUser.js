@@ -1,3 +1,5 @@
+import db from './firebaseConfig.js'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 const getUser = async (secret) => {
 	const ref = collection(db, 'users')
 	const q = query(ref, where('secret', '==', secret))

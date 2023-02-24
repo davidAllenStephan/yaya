@@ -1,3 +1,5 @@
+import { collection, getDocs, query } from 'firebase/firestore'
+import db from './firebaseConfig.js'
 const getSecrets = async () => {
 	const ref = collection(db, 'users')
 	const q = query(ref)

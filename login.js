@@ -1,6 +1,6 @@
 import promptSync from 'prompt-sync'
 const prompt = promptSync()
-import createAccount from './createAccount'
+import createAccount from './createAccount.js'
 
 const login = async (secrets) => {
 	const logreg = prompt('Login or Register? (l or r) ')

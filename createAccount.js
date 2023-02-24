@@ -1,5 +1,5 @@
 import { collection, addDoc } from 'firebase/firestore'
-import db from './firebaseConfig'
+import db from './firebaseConfig.js'
 const createAccount = async (name, secret, address) => {
 	await addDoc(collection(db, 'users'), {
 		secret: secret,

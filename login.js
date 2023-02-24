@@ -9,6 +9,7 @@ const login = async (secrets) => {
 		const secret = prompt('Secret: ')
 		const address = prompt('Address: ')
 		await createAccount(name, secret, address)
+		return secret
 	} else if (logreg === 'l') {
 		const secret = prompt('Please enter your secret ')
 		if (secrets.includes(secret)) {

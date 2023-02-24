@@ -1,11 +1,11 @@
 import fs from 'fs'
 import { PNG } from 'pngjs'
 
-const getImageRGB = () => {
+const getImageRGB = (path) => {
 
     const rgb = [];
 
-    const data = fs.readFileSync('pixil-frame-0.png');
+    const data = fs.readFileSync(path);
     const png = PNG.sync.read(data);
 
     for (let y = 0; y < png.height; y++) {

@@ -35,4 +35,4 @@ const index = async () => {
 	process.exit()
 }
 
-index()
+export default index

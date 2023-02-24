@@ -2,6 +2,6 @@
 
 #!/usr/bin/env node
 
-let command = require('./command')
+import index from './index.js'
 
-command()
+index()

@@ -1,5 +1,6 @@
 import promptSync from 'prompt-sync'
 const prompt = promptSync()
+import createAccount from './createAccount'
 
 const login = async (secrets) => {
 	const logreg = prompt('Login or Register? (l or r) ')
@@ -7,7 +8,7 @@ const login = async (secrets) => {
 		const name = prompt('Name: ')
 		const secret = prompt('Secret: ')
 		const address = prompt('Address: ')
-		await account(name, secret, address)
+		await createAccount(name, secret, address)
 	} else if (logreg === 'l') {
 		const secret = prompt('Please enter your secret ')
 		if (secrets.includes(secret)) {
